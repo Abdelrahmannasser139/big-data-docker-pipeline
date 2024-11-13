@@ -12,16 +12,15 @@ bd-a1/
 # Instructions
 1. Set Up Project
 - Clone the Repository
-   git clone https://github.com/<your-username>/bd-a1.git
+   git clone https://github.com/abdelrahman139/bd-a1.git
    cd bd-a1
 Adding Dataset
 train.csv in the bd-a1/ directory.
 
 2. Docker Setup
 The Dockerfile contains instructions for creating an Ubuntu-based Docker image with the following libraries installed:
-
 Python3, Pandas, Numpy, Seaborn, Matplotlib, Scikit-learn, Scipy
-It also copies the dataset to /home/doc-bd-a1/ in the container and opens a bash shell on startup.
+It also copies the dataset to /home/doc-bd-a1/ in the container .
 
 3. Build and Run the Docker Container
 - Build the Docker Image
@@ -35,7 +34,7 @@ This will process the dataset through the following steps:
 Data Loading (load.py): Loads the dataset as a DataFrame and passes it to the next step.
 Data Preprocessing (dpre.py): Cleans, transforms, reduces, and discretizes the data, saving it to res_dpre.csv.
 Exploratory Data Analysis (eda.py): Saves 3 text files (eda-in-1.txt, eda-in-2.txt, eda-in-3.txt) with insights.
-Visualization (vis.py): Saves a scatter plot as vis.png.
+Visualization (vis.py): Saves a bar chart as vis.png.
 Modeling (model.py): Runs K-means clustering and saves cluster counts in k.txt.
 5. Copy Results from the Container to Local Machine
 Run final.sh on your local machine to copy the output files from the container and then stop the container:
@@ -44,27 +43,25 @@ Run final.sh on your local machine to copy the output files from the container a
 Output files will be in the bd-a1/service-result/ directory in local machine.
 
 Output Files
-After the pipeline completes
-
+After the pipeline completes the following files will be generated in service-result/:
 eda-in-1.txt, eda-in-2.txt, eda-in-3.txt: Text files with EDA insights.
-vis.png: A scatter plot visualization.
+vis.png: A bar chart visualization.
 k.txt: Text file with the cluster counts from K-means clustering.
-Docker Commands Summary
-Build the Docker Image
+# Docker Commands Summary
+- Build the Docker Image
 docker build -t bd-a1-image .
 
-Run the Docker Container
+- Run the Docker Container
 docker run -it --name bd-a1-container bd-a1-image
 
-Execute the Pipeline Inside the Container
+- Execute the Pipeline Inside the Container
 python3 load.py train.csv
-Copy Results and Stop the Container
-Run on your local machine:
-
+- Copy Results and Stop the Container Run on your local machine:
 ./final.sh
 
+Project Structure Recap
 bd-a1/
-├── train.csv        # Original dataset
+├── titanic.csv        # Original dataset
 ├── Dockerfile                # Docker configuration
 ├── final.sh                  # Script to copy outputs and stop container
 ├── README.md                 # Documentation
