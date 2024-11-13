@@ -1,15 +1,21 @@
 # Big Data Docker Pipeline
 - Project Overview:
   
-This project sets up a data processing pipeline within a Docker container using Python. It processes a dataset through loading, preprocessing, exploratory data analysis (EDA), visualization, and K-means clustering. Results are saved to a specified directory on the local machine.
+  This project sets up a data processing pipeline within a Docker container using Python. It processes a dataset through loading, preprocessing, exploratory data    analysis (EDA), visualization, and K-means clustering. Results are saved to a specified directory on the local machine.
 
-# Project Structure
+# Project Structure :
+
 bd-a1/
-├── titanic.csv       # Dataset to be processed
+├── titanic.csv              # Dataset to be processed
+
 ├── Dockerfile               # Docker setup and environment specifications
+
 ├── final.sh                 # Script to copy outputs from container to host and stop container
+
 ├── service-result/          # Directory to store output files after processing
+
 └── README.md                # Project documentation
+
 # Instructions
 1. Set Up Project
 - Clone the Repository
