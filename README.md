@@ -73,7 +73,7 @@ docker build -t bd-a1-image .
 docker run -it --name bd-a1-container bd-a1-image
 
 - Execute the Pipeline Inside the Container
-python3 load.py train.csv
+python3 load.py titanic.csv
 - Copy Results and Stop the Container Run on your local machine:
 ./final.sh
 
