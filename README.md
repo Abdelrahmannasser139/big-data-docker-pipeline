@@ -39,22 +39,24 @@ It also copies the dataset to /home/doc-bd-a1/ in the container .
 - python3 load.py titanic.csv
 This will process the dataset through the following steps:
 
-Data Loading (load.py): Loads the dataset as a DataFrame and passes it to the next step.
-Data Preprocessing (dpre.py): Cleans, transforms, reduces, and discretizes the data, saving it to res_dpre.csv.
-Exploratory Data Analysis (eda.py): Saves 3 text files (eda-in-1.txt, eda-in-2.txt, eda-in-3.txt) with insights.
-Visualization (vis.py): Saves a bar chart as vis.png.
-Modeling (model.py): Runs K-means clustering and saves cluster counts in k.txt.
+  Data Loading (load.py): Loads the dataset as a DataFrame and passes it to the next step.
+  Data Preprocessing (dpre.py): Cleans, transforms, reduces, and discretizes the data, saving it to res_dpre.csv.
+  Exploratory Data Analysis (eda.py): Saves 3 text files (eda-in-1.txt, eda-in-2.txt, eda-in-3.txt) with insights.
+  Visualization (vis.py): Saves a bar chart as vis.png.
+  Modeling (model.py): Runs K-means clustering and saves cluster counts in k.txt.
+  
 5. Copy Results from the Container to Local Machine
 Run final.sh on your local machine to copy the output files from the container and then stop the container:
 
 ./final.sh
 Output files will be in the bd-a1/service-result/ directory in local machine.
 
-Output Files
+# Output Files
 After the pipeline completes the following files will be generated in service-result/:
 eda-in-1.txt, eda-in-2.txt, eda-in-3.txt: Text files with EDA insights.
 vis.png: A bar chart visualization.
 k.txt: Text file with the cluster counts from K-means clustering.
+
 # Docker Commands Summary
 - Build the Docker Image
 docker build -t bd-a1-image .
@@ -67,15 +69,25 @@ python3 load.py train.csv
 - Copy Results and Stop the Container Run on your local machine:
 ./final.sh
 
-Project Structure Recap
+# Project Structure Recap
 bd-a1/
-├── titanic.csv        # Original dataset
+
+├── titanic.csv               # Original dataset
+
 ├── Dockerfile                # Docker configuration
+
 ├── final.sh                  # Script to copy outputs and stop container
+
 ├── README.md                 # Documentation
+
 └── service-result/           # Directory with output files
+
     ├── eda-in-1.txt          # EDA insight 1
+    
     ├── eda-in-2.txt          # EDA insight 2
+    
     ├── eda-in-3.txt          # EDA insight 3
+    
     ├── vis.png               # Visualization image
+    
     └── k.txt                 # Cluster counts
