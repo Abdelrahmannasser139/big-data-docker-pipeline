@@ -3,6 +3,10 @@
   
   This project sets up a data processing pipeline within a Docker container using Python. It processes a dataset through loading, preprocessing, exploratory data    analysis (EDA), visualization, and K-means clustering. Results are saved to a specified directory on the local machine.
 
+# Docker Hub Image
+The Docker image for this project is available on Docker Hub. This image includes Python and the following libraries: Pandas, Numpy, Seaborn, Matplotlib, Scikit-learn, and Scipy, along with all necessary project files.
+Docker Hub Repository: Abdelrahmannasser13/bd-a1
+
 # Project Structure :
 
 bd-a1/
@@ -22,8 +26,9 @@ bd-a1/
 - Clone the Repository
    git clone https://github.com/abdelrahman139/bd-a1.git
    cd bd-a1
+  
 Adding Dataset
-train.csv in the bd-a1/ directory.
+titanic.csv in the bd-a1/ directory.
 
 2. Docker Setup
 The Dockerfile contains instructions for creating an Ubuntu-based Docker image with the following libraries installed:
