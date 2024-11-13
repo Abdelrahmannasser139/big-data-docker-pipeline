@@ -6,6 +6,7 @@
 # Project Structure :
 
 bd-a1/
+
 ├── titanic.csv              # Dataset to be processed
 
 ├── Dockerfile               # Docker setup and environment specifications
