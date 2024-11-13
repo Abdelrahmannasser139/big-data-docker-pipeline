@@ -25,11 +25,13 @@ bd-a1/
 # Instructions
 1. Set Up Project
 - Clone the Repository
+  
    git clone https://github.com/abdelrahman139/bd-a1.git
+  
    cd bd-a1
   
-Adding Dataset
-titanic.csv in the bd-a1/ directory.
+ Adding Dataset
+ titanic.csv in the bd-a1/ directory.
 
 2. Docker Setup
 The Dockerfile contains instructions for creating an Ubuntu-based Docker image with the following libraries installed:
