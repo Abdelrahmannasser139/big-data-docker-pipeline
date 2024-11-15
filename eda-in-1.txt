@@ -1,0 +1,6 @@
+Age distribution (non-numeric values):
+Age
+Adult     100
+Young      58
+Senior     25
+Name: count, dtype: int64

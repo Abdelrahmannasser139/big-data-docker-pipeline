@@ -1,0 +1,5 @@
+Gender distribution:
+Sex
+male      95
+female    88
+Name: count, dtype: int64

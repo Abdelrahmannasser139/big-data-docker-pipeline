@@ -1,0 +1,6 @@
+Number of records in each cluster:
+Cluster
+0.0    118
+1.0     52
+2.0     13
+Name: count, dtype: int64
